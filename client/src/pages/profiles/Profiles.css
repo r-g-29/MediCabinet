@@ -1,0 +1,166 @@
+﻿/* Profiles page – Light mode, white + red */
+.profiles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.profiles-header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.25rem;
+}
+
+.profiles-header p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Profile Card ────────────────────────────────────── */
+.profile-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.profile-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.1rem;
+}
+
+.profile-avatar-name {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.profile-avatar {
+  width: 46px; height: 46px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profile-relation {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  margin-top: 0.2rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.btn-icon {
+  background: transparent;
+  border: 1.5px solid var(--border-subtle);
+  color: var(--text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s;
+  cursor: pointer;
+}
+.btn-icon:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: #d1d5db;
+}
+.btn-icon.danger:hover {
+  color: var(--danger);
+  background: var(--red-50);
+  border-color: var(--red-200);
+}
+
+/* ── Detail Rows ─────────────────────────────────────── */
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.detail-row {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  align-items: baseline;
+}
+
+.detail-label {
+  color: var(--text-muted);
+  min-width: 72px;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.detail-value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ── Allergy Tags ────────────────────────────────────── */
+.allergy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.allergy-tag {
+  background: var(--red-50);
+  color: var(--red-700);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid var(--red-200);
+}
+
+@media (max-width: 600px) {
+  .profiles-grid { grid-template-columns: 1fr; }
+}

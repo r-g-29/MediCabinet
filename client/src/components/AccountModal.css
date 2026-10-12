@@ -1,0 +1,319 @@
+/* Account Modal Styling – Light mode with white & red aesthetic */
+
+.account-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.account-modal-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg, 16px);
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: scaleUp 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.account-modal-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  background: #ffffff;
+}
+
+.account-modal-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.account-modal-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--red-50);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: 1px solid var(--red-100);
+  flex-shrink: 0;
+}
+
+.account-modal-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.account-modal-subtitle {
+  margin: 0.2rem 0 0 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.account-modal-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm, 6px);
+  transition: all 0.15s;
+}
+
+.account-modal-close-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* Hero card preview */
+.account-hero-card {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: linear-gradient(135deg, var(--red-50) 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.account-hero-avatar {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, var(--red-600), var(--red-500));
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
+  flex-shrink: 0;
+}
+
+.account-hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.account-hero-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.account-hero-email {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+.account-hero-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.account-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+}
+
+.account-tag.primary {
+  background: var(--red-100);
+  color: var(--red-700);
+  border: 1px solid var(--red-200);
+}
+
+.account-tag.subtle {
+  background: #ffffff;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Tabs */
+.account-modal-tabs {
+  display: flex;
+  border-bottom: 1.5px solid var(--border-subtle);
+  background: #f8fafc;
+  padding: 0.35rem 1.5rem 0 1.5rem;
+  gap: 0.5rem;
+}
+
+.account-tab-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 2.5px solid transparent;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.account-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.account-tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: #ffffff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.account-error-banner {
+  margin: 1rem 1.5rem 0;
+  padding: 0.65rem 1rem;
+  background: var(--red-50);
+  border: 1px solid var(--red-200);
+  border-radius: var(--radius-sm, 8px);
+  color: var(--danger);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Form */
+.account-form {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-control {
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm, 8px);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: #ffffff;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  font-family: inherit;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.disabled-input {
+  background: #f1f5f9 !important;
+  color: var(--text-muted) !important;
+  cursor: not-allowed;
+}
+
+.form-helper {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+/* Shortcuts card inside general tab */
+.account-shortcuts-box {
+  background: #f8fafc;
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-sm, 8px);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.shortcuts-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.shortcuts-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.btn-link-action {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  margin-top: 0.25rem;
+  transition: text-decoration 0.15s;
+}
+
+.btn-link-action:hover {
+  text-decoration: underline;
+}
+
+.account-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 0.5rem;
+}

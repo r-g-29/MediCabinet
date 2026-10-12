@@ -1,0 +1,88 @@
+﻿/* Schedules page – Light mode, white + red */
+.schedules-page { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.schedules-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+}
+.schedules-header h1 {
+  font-size: 1.75rem; font-weight: 800; color: var(--text-primary);
+  letter-spacing: -0.025em; margin: 0;
+}
+.schedules-header p { color: var(--text-secondary); margin: 0.25rem 0 0; font-size: 0.92rem; }
+
+/* Schedule list */
+.schedule-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.schedule-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.schedule-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+.schedule-card.inactive { opacity: 0.5; }
+
+.schedule-info { flex: 1; min-width: 0; }
+.schedule-name { font-weight: 700; font-size: 1rem; color: var(--text-primary); }
+.schedule-sub  { font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px; }
+.schedule-times { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+
+.time-chip {
+  background: var(--red-50);
+  color: var(--red-700);
+  border: 1px solid var(--red-200);
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.schedule-dates { font-size: 0.78rem; color: var(--text-muted); margin-top: 5px; }
+
+.schedule-actions { display: flex; gap: 0.5rem; align-items: center; }
+
+.badge-active   { background: #d1fae5; color: #065f46; border-radius: 20px; padding: 2px 10px; font-size: 0.75rem; font-weight: 700; }
+.badge-inactive { background: var(--red-50); color: var(--red-700); border-radius: 20px; padding: 2px 10px; font-size: 0.75rem; font-weight: 700; }
+
+/* Modal form */
+.schedule-form { display: flex; flex-direction: column; gap: 1rem; }
+.times-input-row { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.times-input-row input[type="time"] {
+  flex: 0 0 auto;
+  width: auto;
+  padding: 0.45rem 0.7rem;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  color: var(--text-primary);
+}
+
+.time-tag {
+  display: flex; align-items: center; gap: 4px;
+  background: var(--red-50);
+  color: var(--red-700);
+  border: 1px solid var(--red-200);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.time-tag button {
+  background: none; border: none; cursor: pointer;
+  color: var(--accent); font-size: 0.95rem; padding: 0; line-height: 1;
+}
+.time-tag button:hover { color: var(--red-700); }
+
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 500px) { .form-row-2 { grid-template-columns: 1fr; } }

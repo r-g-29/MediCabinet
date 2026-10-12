@@ -1,0 +1,182 @@
+﻿/* Emergency page – Light mode, white + red */
+@media print {
+  body * { visibility: hidden; }
+  .print-area, .print-area * { visibility: visible; }
+  .print-area {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    margin: 0; padding: 0;
+    background: white;
+  }
+  .no-print { display: none !important; }
+  .emergency-card { border: none !important; box-shadow: none !important; }
+}
+
+.emergency-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.emergency-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.emergency-header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+/* ── Selector bar ────────────────────────────────────── */
+.selector-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.selector-bar select {
+  flex: 1;
+  max-width: 320px;
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  background: var(--bg-input);
+  color: var(--text-primary);
+}
+
+/* ── Emergency Card ──────────────────────────────────── */
+.emergency-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.emergency-card-header {
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.emergency-title {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-name {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.profile-age {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* ── Info Sections ───────────────────────────────────── */
+.info-section { margin-bottom: 2rem; }
+
+.info-section h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  border-bottom: 1.5px solid var(--border-subtle);
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.allergies-box {
+  background: var(--red-50);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: 1.05rem;
+  color: var(--red-700);
+  font-weight: 600;
+}
+
+/* ── Medicine List ────────────────────────────────────── */
+.med-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.med-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 1rem 1.1rem;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  gap: 0.5rem;
+  align-items: start;
+  transition: box-shadow 0.15s;
+}
+.med-item:hover { box-shadow: var(--shadow-sm); }
+
+.med-item-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.med-item-generic {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+.med-item-times {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.med-item-uses {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .med-item { grid-template-columns: 1fr; }
+  .emergency-card { padding: 1.5rem; }
+  .profile-name { font-size: 1.8rem; }
+}

@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment Variables & Secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+client/.env
+server/.env
+
+# Production Builds
+dist/
+dist-ssr/
+build/
+client/dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS & System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Settings
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary Scratch & Test Artifacts
+server/scratch_*.js
+server/test_*.js
+server/pixel.png
+server/uploads/
+
+# OCR Downloaded Trained Data
+server/eng.traineddata
